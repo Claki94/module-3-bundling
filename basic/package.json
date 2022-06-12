@@ -1,0 +1,38 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "Basic webpack exercise",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p -l type-check:watch start:dev",
+    "start:dev": "webpack serve --mode development",
+    "build:dev": "webpack --mode development",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
+  },
+  "keywords": [
+    "webpack",
+    "exercise"
+  ],
+  "author": "Marcel Clavero Kilian",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.7.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.2"
+  }
+}

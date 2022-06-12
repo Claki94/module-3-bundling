@@ -1,0 +1,74 @@
+@import "./variables.scss";
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0 $spacing-05;
+  padding: $spacing-07;
+  background-color: $dark-blue;
+  border-radius: $rounded-corner;
+
+  .card-button {
+    @include card-button(false, $white, $primary-color);
+    @include card-button-hover($primary-color, $white);
+    cursor: pointer;
+  }
+
+  .card-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $spacing-05;
+    margin-bottom: $spacing-07;
+
+    .card-button-rounded {
+      @include card-button(true, $light-grey, $dark-grey);
+    }
+
+    .rating-button {
+      @include card-button-hover($white, $primary-color);
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: $medium-grey;
+      color: $white;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      justify-content: flex-start;
+    }
+  }
+
+  .card-title {
+    color: $white;
+    margin-bottom: $spacing-05;
+  }
+
+  .card-text {
+    color: $light-grey;
+    line-height: $spacing-06;
+    margin-bottom: $spacing-06;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .thank-you-svg {
+    margin-bottom: $spacing-07;
+  }
+
+  .result-text {
+    color: $primary-color;
+    background-color: $dark-grey;
+    padding: $spacing-03 $spacing-05 $spacing-02;
+    border-radius: $rounded-corner;
+    margin-bottom: $spacing-08;
+  }
+}
+
+.card-result {
+  align-items: center;
+}

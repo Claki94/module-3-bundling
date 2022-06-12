@@ -1,0 +1,69 @@
+// Layouts
+$mobile-width: 375px;
+
+// App colors
+$primary-color: hsl(25, 97%, 53%);
+
+// Neutral colors
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-grey: hsl(180, 5%, 31%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+// Font
+$font-size-body: 15px;
+$font-normal: 400;
+$font-bold: 700;
+
+// Border
+$rounded-corner: 25px;
+$circle-radius: 50%;
+
+// Spacings
+$spacing-01: 2px;
+$spacing-02: 4px;
+$spacing-03: 8px;
+$spacing-04: 12px;
+$spacing-05: 16px;
+$spacing-06: 24px;
+$spacing-07: 32px;
+$spacing-08: 40px;
+$spacing-09: 48px;
+$spacing-10: 64px;
+
+// Mixins
+@mixin card-button($circle, $font-color, $bg-color) {
+  font-size: 1rem;
+  font-weight: $font-bold;
+  border-style: none;
+  background-color: $bg-color;
+  color: $font-color;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  @if($circle) {
+    width: 50px;
+    height: 50px;
+    border-radius: $circle-radius;
+
+    @media screen and (max-width: 410px) {
+      width: 40px;
+      height: 40px;
+    }
+
+  } @else {
+    width: 100%;
+    border-radius: $rounded-corner;
+    padding: $spacing-04;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+@mixin card-button-hover($font-color, $bg-color) {
+  &:hover {
+    background-color: $bg-color;
+    color: $font-color;
+  }
+}

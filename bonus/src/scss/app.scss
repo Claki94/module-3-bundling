@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@import "./_variables.scss";
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: $font-normal;
+  font-size: $font-size-body;
+  background-color: $very-dark-blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

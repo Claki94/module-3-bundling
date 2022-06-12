@@ -23,7 +23,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         exclude: /node_modules/,
-        loader: "url-loader",
+        type: "asset/inline",
       },
       {
         test: /\.html$/,
